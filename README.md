@@ -72,3 +72,35 @@ python manage.py collectstatic
 # Запускаем сервер
 python manage.py runserver
 ```
+## Axios и тестовое API
+```bash
+# Устанавливаем rest_framework
+pip install djangorestframework
+
+```
+файл ___blog/setting.py__
+```python
+INSTALLED_APP = [
+  'blogapp',
+  'rest_framework'
+]
+```
+создаем в нашем приложении папку api
+```bash
+cd blogapp
+mkdir api
+cd api
+```
+>api
+>><p align="justify">__init__.py
+</p>
+>>serializers.py
+>>urls.py
+>>views.py
+
+#### Установка axios
+```bash
+cd blog-ui
+npm install axios
+cd ../
+```
