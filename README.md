@@ -104,3 +104,27 @@ cd blog-ui
 npm install axios
 cd ../
 ```
+```javascript
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const App = () => {
+
+	const [post, setPost] = useState([]);
+	
+	useEffect(() => {
+		axios({
+			method: "GET",
+			url: "http://127.0.0.1:8000/api/test-api/",
+		}).then(response() => {
+			setPost(response.data)
+		})
+	}, [])
+	
+	return (
+		<div>
+			{ post.title }
+		</div>
+	)
+}
+```
