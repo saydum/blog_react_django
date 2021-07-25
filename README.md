@@ -110,7 +110,7 @@ import axios from 'axios';
 
 const App = () => {
 
-	const [post, setPost] = useState([]);
+const [post, setPost] = useState([]);
 	
 	useEffect(() => {
 		axios({
